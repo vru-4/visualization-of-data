@@ -1,0 +1,58 @@
+<script>
+    $.getScript('https://code.highcharts.com/highcharts-3d.js',function(){
+        console.log("loaded highcharts-3d !");
+        $.getScript('/WebsiteData/JS/realtime.js',function(){
+            console.log("loaded realtime !");
+//nested call 1
+            $.getScript('/WebsiteData/JS/highchartsTheme.js',function(){
+                console.log("loaded highchartsTheme !"); });
+        });
+    })
+</script>
+<!-- <script src="/subscriber/highchartsTheme.js"></script> -->
+<div style="color:green" class="text-center">
+    <h1 class="text-center">Real time Data Visualization</h1>
+    <div  id="lastRefreshedTime"></div>
+    <h6 class="text-center">(Data will be refreshed after every 60 seconds)</h6>
+
+    <!--  <div id="container1" style="min-width: 310px; height: 400px; margin: 0 auto"></div><br><br>
+        , <div> -->
+
+    <br>
+    <input class="center"type="radio" name="mychart" class="mychart" id= "column" value="column" onclick= "filterData('San Francisco')" checked > San Francisco
+    <input class="center"type="radio" name="mychart" class="mychart" id= "column" value="column" onclick= "filterData('San Jose')" > San Jose
+    <input class="center"type="radio" name="mychart" class="mychart" id= "column" value="column" onclick= "filterData('Palo Alto')" > Palo Alto
+    <input class="center"type="radio" name="mychart" class="mychart" id= "column" value="column" onclick= "filterData('Redwood City')" > Redwood City
+    <input class="center"type="radio" name="mychart" class="mychart" id= "column" value="column" onclick= "filterData('Mountain View')" > Mountain View <br>
+</div>
+
+<ul id="tabs" class="nav nav-tabs" role="tablist">
+    <li id="realtime1-tab" class="active">
+        <a href="#realtime1" data-toggle="tab">Real Time 1</a>
+    </li>
+    <li  id="realtime2-tab" >
+        <a href="#realtime2" data-toggle="tab">Real Time 2</a>
+    </li>
+    <li  id="realtime3-tab" >
+        <a href="#realtime3"  data-toggle="tab">Real Time 3</a>
+    </li>
+</ul>
+
+<div class="tab-content mukul">
+    <div  class="tab-pane fade in active" id="realtime1" >
+        <div class="col-md-12">
+            <div id="container4"></div>
+        </div>
+    </div>
+    <div  class="tab-pane fade" id="realtime2" >
+        <div class="col-md-12">
+            <div id="container2" style=""></div>
+        </div>
+    </div>
+    <div  class="tab-pane fade" id="realtime3" >
+        <div class="col-md-12">
+            <div class="col-md-6" id="container"></div>
+            <div class="col-md-6" id="container3"></div>
+        </div>
+    </div>
+</div>

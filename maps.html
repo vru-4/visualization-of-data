@@ -1,0 +1,34 @@
+<!-- Placeholder for the Google Map -->
+<html>
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <noscript>
+        <!-- http://code.google.com/apis/maps/documentation/staticmaps/ -->
+        <img src="http://maps.google.com/maps/api/staticmap?center=1%20infinite%20loop%20cupertino%20ca%2095014&amp;zoom=16&amp;size=512x512&amp;maptype=roadmap&amp;sensor=false" />
+    </noscript>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="maps.js">
+    </script>
+</head>
+<body>
+<div style="color:green" class="text-center">
+    <h2>Real time Data Visualization - Map </h2>
+    <div  id="lastRefreshedTime"></div>
+    <h6>(Data will be refreshed after every 60 seconds)</h6>
+
+    <div class="container">
+        <br>
+        <input class="center"type="radio" name="mychart" class="mychart" id= "column" value="column" onclick= "filterData1('San Francisco')" checked> San Francisco
+        <input class="center"type="radio" name="mychart" class="mychart" id= "column" value="column" onclick= "filterData1('San Jose')"  > San Jose
+        <input class="center"type="radio" name="mychart" class="mychart" id= "column" value="column" onclick= "filterData1('Palo Alto')" > Palo Alto
+        <input class="center"type="radio" name="mychart" class="mychart" id= "column" value="column" onclick= "filterData1('Redwood City')" > Redwood City
+        <input class="center"type="radio" name="mychart" class="mychart" id= "column" value="column" onclick= "filterData1('Mountain View')" > Mountain View
+        <input class="center"type="radio" name="mychart" class="mychart" id= "column" value="column" onclick= "filterData1('all')" > All
+        <br><br>
+    </div>
+</div>
+<div id="map" style="height: 612px;"></div>
+</div>
+</body>
+</html>
