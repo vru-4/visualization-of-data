@@ -2,7 +2,7 @@ var liveData1 = [];
 var cityName = 'San Francisco';
 var filteredData = [];
 var markers = [];
-var iterator = 0;
+var iterator = 00;
 var map;
 var infowindow = [];
 geocoder = new google.maps.Geocoder();
