@@ -31,7 +31,7 @@ function requestData(city) {
                 mountainViewAvability.shift();
                 paloAltoAvability.shift();
             }
-            $("#lastRefreshedTime").html('<h5 class="text-center">Last Refreshed Time - <b style="color:#7CB5EC">' + data.executionTime + '</b></h5>')
+            $("#LastRefreshedTime").html('<h5 class="text-center">Last Refreshed Time - <b style="color:#7CB5EC">' + data.executionTime + '</b></h5>')
             refreshTime.push(data.executionTime);
             calculateAvaibility(data.stationBeanList);
         }
